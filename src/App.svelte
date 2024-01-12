@@ -15,30 +15,32 @@ Jane Appleseed
 
 000
 
-<form>
+<form action="https://httpbin.org/post" method="post">
   <div>
     <label for="name">Cardholder Name</label>
-    <input type="text" name="name" id="name" bind:value={name}/>e.g. Jane Appleseed
+    <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed" bind:value={name}/>
   </div>
+
   <div>
     <label for="number">Card Number</label>
-    <input type="text" name="number" id="number" bind:value={number}/>e.g. 1234 5678 9123 0000
+    <input type="text" id="number" name="number" placeholder="e.g. 1234 5678 9123 0000" bind:value={number}/>
   </div>
+
   <div>
     <label>Exp. Date (MM/YY)
-      <input type="number" name="month" id="month" bind:value={month}/>MM
-      <input type="number" name="year" id="year" bind:value={year}/>YY
+      <input type="number" id="month" name="month" placeholder="MM" bind:value={month}/>
+      <input type="number" id="year" name="year" placeholder="YY" bind:value={year}/>
     </label>
   </div>
+
   <div>
     <label for="cvc">CVC</label>
-    <input type="number" name="cvc" id="cvc">e.g. 123
+    <input type="number" id="cvc" name="cvc" placeholder="e.g. 123">
   </div>
 
   <div>
-    <button type="button" on:click={handleClick}>Confirm</button>
+    <button type="submit" on:click|preventDefault={handleClick}>Confirm</button>
   </div>
-
 
   <!-- Completed state start -->
 
