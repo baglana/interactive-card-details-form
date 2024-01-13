@@ -1,9 +1,9 @@
-<script>
-  export let name;
-  export let number;
-  export let month;
-  export let year;
-  export let cvc;
+<script lang="ts">
+  export let name: string;
+  export let number: string;
+  export let month: string;
+  export let year: string;
+  export let cvc: string;
 </script>
 
 <article class="front">
