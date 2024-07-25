@@ -1,5 +1,6 @@
 <script lang="ts">
   import Card from './lib/Card.svelte';
+  import formValidate from './services/formValidate';
 
   type Card = {
     number: string;
